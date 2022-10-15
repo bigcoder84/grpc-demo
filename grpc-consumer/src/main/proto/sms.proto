@@ -1,0 +1,26 @@
+// 使用proto3语法
+syntax = "proto3";
+// 生成多个类
+option java_multiple_files = false;
+// 生成java类所在的包
+option java_package = "cn.bigcoder.demo.grpc.sms.proto";
+// 生成外层类类名
+option java_outer_classname = "SmsProto";
+// .proto包名
+package news;
+
+service SmsService {
+  // 服务端流式 RPC，返回值新增stream 关键字，代表服务端返回的是一个对象流
+  rpc sendSms(SmsRequest) returns (stream SmsResponse) {}
+}
+
+message SmsRequest {
+  // 发送短信的手机号
+  repeated string phoneNumber = 1;
+  // 短信内容
+  string content = 2;
+}
+
+message SmsResponse {
+  string result = 1;
+}

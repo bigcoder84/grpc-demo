@@ -5,6 +5,7 @@ import cn.bigcoder.demo.grpc.news.proto.NewsServiceGrpc;
 import io.grpc.stub.StreamObserver;
 
 /**
+ * 新闻服务的业务逻辑，用于测试GRPC服务端一元通信
  * @author: Jindong.Tian
  * @date: 2022-10-07
  **/
