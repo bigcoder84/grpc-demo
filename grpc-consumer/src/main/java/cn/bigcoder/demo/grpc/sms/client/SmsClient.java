@@ -1,6 +1,5 @@
 package cn.bigcoder.demo.grpc.sms.client;
 
-import cn.bigcoder.demo.grpc.news.proto.NewsServiceGrpc;
 import cn.bigcoder.demo.grpc.sms.proto.SmsProto;
 import cn.bigcoder.demo.grpc.sms.proto.SmsServiceGrpc;
 import io.grpc.ManagedChannel;
@@ -9,6 +8,7 @@ import io.grpc.ManagedChannelBuilder;
 import java.util.Iterator;
 
 /**
+ * 客户端流式通信
  * @author: Jindong.Tian
  * @date: 2022-10-15
  **/

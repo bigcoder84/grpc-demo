@@ -1,5 +1,6 @@
 package cn.bigcoder.demo.grpc;
 
+import cn.bigcoder.demo.grpc.msg.handler.MessageServiceHandler;
 import cn.bigcoder.demo.grpc.news.handler.NewsServiceHandler;
 import cn.bigcoder.demo.grpc.register.handler.RegisterHandler;
 import cn.bigcoder.demo.grpc.sms.handler.SmsServiceHandler;
@@ -21,6 +22,7 @@ public class ProducerServer {
                 .addService(new NewsServiceHandler())
                 .addService(new SmsServiceHandler())
                 .addService(new RegisterHandler())
+                .addService(new MessageServiceHandler())
                 .build().start();
         System.out.println("ProducerServer start success,port:" + PORT);
         server.awaitTermination();

@@ -1,0 +1,24 @@
+// 使用proto3语法
+syntax = "proto3";
+// 生成多个类
+option java_multiple_files = false;
+// 生成java类所在的包
+option java_package = "cn.bigcoder.demo.grpc.msg.proto";
+// 生成外层类类名
+option java_outer_classname = "MsgProto";
+// .proto包名
+package news;
+
+service MessageService {
+  // 服务端流式 RPC，返回值新增stream 关键字，代表服务端返回的是一个对象流
+  rpc sendMsg(stream MessageRequest) returns (stream MessageResponse) {}
+}
+
+message MessageRequest {
+  // 消息内容
+  string msg = 1;
+}
+
+message MessageResponse {
+  string result = 1;
+}
