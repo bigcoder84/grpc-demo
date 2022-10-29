@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: grpc-producer-spring
+server:
+  port: 8082
+grpc:
+  client:
+    #    grpc-server 是自定义参数，代表服务名称，在使用@GrpcClient注解时，需要指定服务地址的名称
+    grpc-server:
+      address: 'static://127.0.0.1:8081'
+      negotiation-type: plaintext

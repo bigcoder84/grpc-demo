@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: grpc-producer-spring
+server:
+  port: 8080
+grpc:
+  server:
+    port: 8081
